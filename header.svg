@@ -12,6 +12,7 @@
           font-family: monospace;
           font-size: 1.5em;
           animation: cycle 10s linear infinite;
+          animation-delay: 10s;
         }
 
         .line {
@@ -26,16 +27,17 @@
         }
 
         .line1 {
-          animation: typing1 2s steps(14, end) 0s 1 forwards, blink 0.7s step-end infinite alternate;
+          animation: typing1 2s steps(16, end) 2s 1 forwards, blink 0.7s step-end infinite alternate;
         }
 
         .line2 {
-          animation: typing2 4s steps(70, end) 2.5s 1 forwards, blink 0.7s step-end infinite alternate;
+          white-space: normal;
+          animation: typing2 4s steps(70, end) 5s 1 forwards, blink 0.7s step-end infinite alternate;
         }
 
         @keyframes typing1 {
           from { width: 0 }
-          to { width: 14ch }
+          to { width: 16ch }
         }
 
         @keyframes typing2 {
@@ -50,14 +52,13 @@
 
        @keyframes cycle {
           0%   { opacity: 1; }
-          90%  { opacity: 1; }
-          91%  { opacity: 0; }
-          100% { opacity: 1; }
+          10%  { opacity: 0; }
+          20%  { opacity: 1; }
         }
       </style>
       <div class="wrapper">
-        <div class="line line1">José Oliveira</div>
-        <div class="line line2">awk '/precision|problem-solving|analysis/' pharmacist.log > programmer.sh &amp;&amp; sudo apt install vim</div>
+        <div class="line line1">$&gt;José Oliveira</div>
+        <div class="line line2">$&gt;awk '/precision|problem-solving|analysis/' pharmacist.log > programmer.sh &amp;&amp; sudo apt install vim</div>
       </div>
   </div>
  </foreignObject>

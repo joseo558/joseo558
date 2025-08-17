@@ -6,11 +6,13 @@
           height: 100vh;
           display: grid;
           place-items: center;
+          font-family: monospace;
+          font-size: 2em;
+          animation: reset 10s linear infinite;
         }
 
-        .text {
-          width: 9ch;
-          animation: typing 1.5s steps(9), blink .5s step-end infinite alternate;
+        .line {
+          width: 0ch;
           white-space: nowrap;
           overflow: hidden;
           border-right: 3px solid;
@@ -19,26 +21,41 @@
           background: linear-gradient(90deg, rgba(0,241,220,1) 0%, rgba(86,115,241,1) 44%, rgba(103,68,241,1) 54%, rgba(254,0,255,1) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          animation: blink .5s step-end infinite alternate;
         }
 
-        @keyframes typing {
-          from {
-            width: 0
-          }
+        .line1 {
+          animation: typing1 2s steps(14) 0s 1 normal both, blink .5s step-end infinite alternate;
+        }
+
+        .line2 {
+          animation: typing2 4s steps(65) 2.5s 1 normal both, blink .5s step-end infinite alternate;
+        }
+
+        @keyframes typing1 {
+          from { width: 0 }
+          to { width: 14ch }
+        }
+
+        @keyframes typing2 {
+          from { width: 0 }
+          to { width: 65ch }
         }
 
         @keyframes blink {
           from, to { border-color: transparent }
           50% { border-color: rgba(254,0,255,1); }
         }
+
+       @keyframes reset {
+          0% { opacity: 1; }
+          95% { opacity: 1; }
+          100% { opacity: 0; }
+        }
       </style>
       <div class="wrapper">
-        <div class="text">
-          José Oliveira
-        </div>
-        <div class="text">
-          awk '/precision|problem-solving|analysis/' pharmacist.log > programmer.sh sudo apt install vim
-        </div>
+        <div class="line line1">José Oliveira</div>
+        <div class="line line2">awk '/precision|problem-solving|analysis/' pharmacist.log > programmer.sh sudo apt install vim</div>
       </div>
   </div>
  </foreignObject>

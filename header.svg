@@ -37,7 +37,7 @@
           José Oliveira
         </div>
         <div class="text">
-          awk '/precision|problem-solving|analysis/' pharmacist.log > programmer.sh && sudo apt install vim
+          awk '/precision|problem-solving|analysis/' pharmacist.log > programmer.sh sudo apt install vim
         </div>
       </div>
   </div>

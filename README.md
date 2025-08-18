@@ -17,7 +17,7 @@
   <img src="https://skillicons.dev/icons?i=html,css,js,php,mysql,mongo,figma,python" />
   <br />
   <img src="https://skillicons.dev/icons?i=vim,idea,pycharm,vscode,git,notion" />
-  <img width="60" height="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg" />
+  <img width="48" height="48" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg" />
   <br />
 </p>
 

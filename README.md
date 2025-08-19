@@ -23,18 +23,31 @@
 
 ## 💻 42 School Progress
 
+<div align="center">
+  <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-circled-0-50.png" alt="0" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-arrow-50.png" alt="arrow" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-circled-1-50.png" alt="1" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-arrow-50.png" alt="arrow" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-circled-2-50.png" alt="2" />
+</div>
+
 ```mermaid
 flowchart LR
-    milestone0@{ img: "https://raw.githubusercontent.com/joseo558/joseo558/main/numbers/0.svg", label: "Libft", w: 40, h: 20 }
+    milestone0@{ shape: bow-rect, label: "Libft" }
     milestone1@{ shape: bow-rect, label: "Ft_printf<br/>Get_next_line<br/>Born2BeRoot" }
     milestone2@{ shape: bow-rect, label: "Push_Swap<br/>Minitalk<br/>Fract_ol" }
     milestone0 e1@==> milestone1
     milestone1 e2@==> milestone2
     e1@{ animate: true }
     e2@{ animate: true }
+    classDef default fill:#63167A,color:#F8E6FA,stroke:#1164BD,stroke-width:4px;
 ```
-
-### For pedagogical reasons
+<div align="center">
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/libftm.png" alt="libftbonus" height="80"/>
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/ft_printfm.png" alt="printfbonus" height="80" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/get_next_linem.png" alt="getnnextlinebonus" height="80" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/born2berootm.png" alt="born2berootbonus" height="80" />
+</div>
 
 ## 📫 Contacts
 

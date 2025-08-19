@@ -21,6 +21,21 @@
   <br />
 </p>
 
+## 💻 42 School Progress
+
+```mermaid
+flowchart LR
+    milestone0@{ img: "https://raw.githubusercontent.com/joseo558/joseo558/main/numbers/0.svg", label: "Libft", w: 40, h: 20 }
+    milestone1@{ shape: bow-rect, label: "Ft_printf<br/>Get_next_line<br/>Born2BeRoot" }
+    milestone2@{ shape: bow-rect, label: "Push_Swap<br/>Minitalk<br/>Fract_ol" }
+    milestone0 e1@==> milestone1
+    milestone1 e2@==> milestone2
+    e1@{ animate: true }
+    e2@{ animate: true }
+```
+
+### For pedagogical reasons
+
 ## 📫 Contacts
 
 <div align="center">

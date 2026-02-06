@@ -29,6 +29,8 @@
   <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-circled-1-50.png" alt="1" />
   <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-arrow-50.png" alt="arrow" />
   <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-circled-2-50.png" alt="2" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-arrow-50.png" alt="arrow" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/Icons/icons8-circled-3-50.png" alt="3" />
 </div>
 
 ```mermaid
@@ -36,17 +38,23 @@ flowchart LR
     milestone0@{ shape: bow-rect, label: "Libft" }
     milestone1@{ shape: bow-rect, label: "Ft_printf<br/>Get_next_line<br/>Born2BeRoot" }
     milestone2@{ shape: bow-rect, label: "Push_Swap<br/>Minitalk<br/>Fract_ol" }
+    milestone3@{ shape: bow-rect, label: "Philosophers<br/>Minishell" }
     milestone0 e1@==> milestone1
     milestone1 e2@==> milestone2
+    milestone2 e3@==> milestone3
     e1@{ animate: true }
     e2@{ animate: true }
+    e3@{ animate: true }
     classDef default fill:#63167A,color:#F8E6FA,stroke:#1164BD,stroke-width:4px;
 ```
 <div align="center">
-  <img src="https://github.com/joseo558/joseo558/blob/main/badges/libftm.png" alt="libftbonus" height="80"/>
-  <img src="https://github.com/joseo558/joseo558/blob/main/badges/ft_printfm.png" alt="printfbonus" height="80" />
-  <img src="https://github.com/joseo558/joseo558/blob/main/badges/get_next_linem.png" alt="getnnextlinebonus" height="80" />
-  <img src="https://github.com/joseo558/joseo558/blob/main/badges/born2berootm.png" alt="born2berootbonus" height="80" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/libftm.png" alt="libft bonus" height="80"/>
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/ft_printfm.png" alt="printf bonus" height="80" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/get_next_linem.png" alt="getnextline bonus" height="80" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/born2berootm.png" alt="borntoberoot bonus" height="80" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/push_swape.png" alt="push swap" height="80" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/minitalkm.png" alt="minitalk bonus" height="80" />
+  <img src="https://github.com/joseo558/joseo558/blob/main/badges/fract-olm.png" alt="fractol bonus" height="80" />
 </div>
 
 ## 📫 Contacts

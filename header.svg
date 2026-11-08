@@ -1,79 +1,67 @@
-<svg fill="none" width="100%" height="100%" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
- <foreignObject width="100%" height="100%">
-  <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        .wrapper {
-          height: 100%;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding: 10px;
-          font-family: monospace;
-          font-size: 1em;
-          animation: cycle 5s linear infinite;
-          background-color: black;
-        }
+<svg width="800" height="150" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Terminal animation: José Oliveira, from pharmacist.log to programmer.sh">
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="740" y2="0">
+      <stop offset="0" stop-color="#00f1dc"/>
+      <stop offset="0.44" stop-color="#5673f1"/>
+      <stop offset="0.54" stop-color="#6744f1"/>
+      <stop offset="1" stop-color="#fe00ff"/>
+    </linearGradient>
+    <clipPath id="c1"><rect class="w1" x="40" y="0" width="176" height="150"/></clipPath>
+    <clipPath id="c2"><rect class="w2" x="40" y="0" width="682" height="150"/></clipPath>
+    <clipPath id="c3"><rect class="w3" x="40" y="0" width="407" height="150"/></clipPath>
+  </defs>
 
-        .line {
-          width: 0ch;
-          height: 100%;
-          white-space: nowrap;
-          overflow: hidden;
-          border-right: 3px solid;
-          background: linear-gradient(90deg, rgba(0,241,220,1) 0%, rgba(86,115,241,1) 44%, rgba(103,68,241,1) 54%, rgba(254,0,255,1) 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          margin: 0;
-        }
+  <style>
+    text { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 18px; fill: url(#g); }
 
-        .line1 {
-          animation: typing1 5s steps(16, end) 2s 1 forwards, blink 0.7s step-end infinite alternate;
-        }
+    /* Whole animation loops every 20s */
+    .content { animation: fade 20s linear infinite; }
 
-        .line2 {
-          border: none;
-          animation: typing2 10s steps(62, end) 7s 1 forwards, blink 0.7s step-end infinite alternate;
-        }
+    .w1 { animation: w1 20s steps(16, end) infinite; }
+    .w2 { animation: w2 20s steps(62, end) infinite; }
+    .w3 { animation: w3 20s steps(37, end) infinite; }
 
-       .line3 {
-          animation: typing3 8s steps(38, end) 18s 1 forwards, blink 0.7s step-end infinite alternate;
-        }
+    .k1 { animation: k1 20s steps(16, end) infinite, o1 20s linear infinite; }
+    .k2 { animation: k2 20s steps(62, end) infinite, o2 20s linear infinite; }
+    .k3 { animation: k3 20s steps(37, end) infinite, o3 20s linear infinite; }
+    .blink { animation: blink 0.8s steps(1) infinite; }
 
-        @keyframes typing1 {
-          from { width: 0 }
-          to { width: 16ch }
-        }
+    @keyframes w1 { 0%,5% {width:0} 14%,99.9% {width:176px} 100% {width:0} }
+    @keyframes w2 { 0%,17% {width:0} 40%,99.9% {width:682px} 100% {width:0} }
+    @keyframes w3 { 0%,43% {width:0} 58%,99.9% {width:407px} 100% {width:0} }
 
-        @keyframes typing2 {
-          from { width: 0 }
-          to { width: 100% }
-        }
+    @keyframes k1 { 0%,5% {transform:translateX(0)} 14%,100% {transform:translateX(176px)} }
+    @keyframes k2 { 0%,17% {transform:translateX(0)} 40%,100% {transform:translateX(682px)} }
+    @keyframes k3 { 0%,43% {transform:translateX(0)} 58%,100% {transform:translateX(407px)} }
 
-        @keyframes typing3 {
-          from { width: 0 }
-          to { width: 38ch }
-        }
+    @keyframes o1 { 0%,4.9% {opacity:0} 5%,14.5% {opacity:1} 15%,100% {opacity:0} }
+    @keyframes o2 { 0%,16.9% {opacity:0} 17%,40.5% {opacity:1} 41%,100% {opacity:0} }
+    @keyframes o3 { 0%,42.9% {opacity:0} 43%,100% {opacity:1} }
 
-        @keyframes blink {
-          from, to { border-color: transparent }
-          50% { border-color: rgba(254,0,255,1); }
-        }
+    @keyframes blink { 0%,50% {opacity:1} 50.01%,100% {opacity:0} }
+    @keyframes fade { 0%,92% {opacity:1} 97%,99.9% {opacity:0} 100% {opacity:1} }
 
-       @keyframes cycle {
-          0%   { opacity: 1; }
-          5%  { opacity: 0.5; }
-          10%  { opacity: 0.8; }
-          15%  { opacity: 0.3; }
-          20%  { opacity: 0.6; }
-          25%  { opacity: 1; }
-        }
-      </style>
-      <div class="wrapper">
-        <p class="line line1">$&gt;José Oliveira</p>
-        <p class="line line2">$&gt;awk '/precision|problem-solving|analysis/' pharmacist.log &gt;</p>
-        <p class="line line3">programmer.sh &amp;&amp; sudo apt install vim</p>
-      </div>
-  </div>
- </foreignObject>
+    /* Static, fully typed version for people who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .content, .w1, .w2, .w3, .k1, .k2, .k3, .blink { animation: none !important; }
+      .k1, .k2 { opacity: 0; }
+      .k3 { transform: translateX(407px); }
+    }
+  </style>
+
+  <!-- Window -->
+  <rect x="1" y="1" width="798" height="148" rx="12" fill="#0d1117" stroke="url(#g)" stroke-width="2"/>
+  <circle cx="24" cy="22" r="5" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="5" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="5" fill="#27c93f"/>
+
+  <g class="content">
+    <text x="40" y="66" clip-path="url(#c1)" textLength="176" lengthAdjust="spacing">$&gt; José Oliveira</text>
+    <text x="40" y="96" clip-path="url(#c2)" textLength="682" lengthAdjust="spacing">$&gt; awk '/precision|problem-solving|analysis/' pharmacist.log &gt;</text>
+    <text x="40" y="126" clip-path="url(#c3)" textLength="407" lengthAdjust="spacing">programmer.sh &amp;&amp; sudo apt install vim</text>
+
+    <g class="k1"><rect x="40" y="50" width="9" height="20" fill="#fe00ff" opacity="0.9"/></g>
+    <g class="k2"><rect x="40" y="80" width="9" height="20" fill="#fe00ff" opacity="0.9"/></g>
+    <g class="k3"><rect class="blink" x="40" y="110" width="9" height="20" fill="#fe00ff"/></g>
+  </g>
 </svg>
